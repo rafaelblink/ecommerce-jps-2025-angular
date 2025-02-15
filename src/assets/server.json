@@ -1,0 +1,91 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camiseta Preta",
+      "description": "Camiseta de algodão 100%, confortável e estilosa.",
+      "price": 49.9,
+      "discount": 10,
+      "stock": 100,
+      "category": "Vestuário",
+      "brand": "Urban Wear",
+      "rating": 4.5,
+      "createdAt": "2024-02-05T10:30:00Z",
+      "image": "camiseta-preta.png"
+    },
+    {
+      "id": 2,
+      "name": "Tênis Esportivo",
+      "description": "Tênis leve e confortável, ideal para caminhadas e academia.",
+      "price": 199.9,
+      "discount": 15,
+      "stock": 50,
+      "category": "Calçados",
+      "brand": "SportX",
+      "rating": 4.7,
+      "createdAt": "2024-01-20T15:45:00Z",
+      "image": "tenis-esportivo.png"
+    },
+    {
+      "id": 3,
+      "name": "Mochila Escolar",
+      "description": "Mochila resistente, com vários compartimentos e design moderno.",
+      "price": 89.9,
+      "discount": 5,
+      "stock": 30,
+      "category": "Acessórios",
+      "brand": "BackPack Pro",
+      "rating": 4.2,
+      "createdAt": "2024-01-15T08:20:00Z",
+      "image": "mochila-escolar.png"
+    },
+    {
+      "id": 4,
+      "name": "Fone de Ouvido Bluetooth",
+      "description": "Fone sem fio com qualidade de som imersiva e bateria de longa duração.",
+      "price": 159.9,
+      "discount": 0,
+      "stock": 25,
+      "category": "Eletrônicos",
+      "brand": "TechSound",
+      "rating": 4.8,
+      "createdAt": "2024-02-01T14:10:00Z",
+      "image": "fone-bluetooth.png"
+    },
+    {
+      "id": 5,
+      "name": "Relógio Smartwatch",
+      "description": "Smartwatch com monitoramento de frequência cardíaca e notificações.",
+      "price": 299.9,
+      "discount": 20,
+      "stock": 15,
+      "category": "Eletrônicos",
+      "brand": "SmartLife",
+      "rating": 4.6,
+      "createdAt": "2024-02-03T12:00:00Z",
+      "image": "relogio.png"
+    }
+  ],
+  "sales": [
+    {
+      "id": 1,
+      "products": [
+        {
+          "productId": 1,
+          "name": "Camiseta Preta",
+          "quantity": 2,
+          "price": 49.9
+        },
+        {
+          "productId": 2,
+          "name": "Tênis Esportivo",
+          "quantity": 1,
+          "price": 199.9
+        }
+      ],
+      "total": 249.8,
+      "paymentMethod": "Pix",
+      "createdAt": "2024-02-05T14:30:00Z"
+    }
+  ]
+}
