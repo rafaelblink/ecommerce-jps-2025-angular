@@ -1,15 +1,21 @@
-<h1 
-[style.background]='title === "erro" ? "red" : "blue" '>Testeeasdiuahsdiuh</h1>
-<p>{{ title }}</p>
-<input type="text" name="" id="" [(ngModel)]='title'>
+<div class="container">
+    <app-header />
 
-<input type="checkbox" name="" id="">
+    <div class="row">
+        <div class="col-3">
+            <app-card title='Card title 1' />
+        </div>
+        <div class="col-3">
+            <app-card title='Card title 2' />
+        </div>
+        <div class="col-3">
+            <app-card title="Card title 3" />
+        </div>
+        <div class="col-3">
+            <app-card title='Card title 4' />
+        </div>
+    </div>
 
-<button [id]='idButton' (click)="novaFuncao()">Nova funcao</button>
 
-<app-header></app-header>
-<app-header></app-header>
-<app-header></app-header>
-<app-header></app-header>
-
-<router-outlet></router-outlet>
+    <router-outlet></router-outlet>
+</div>
