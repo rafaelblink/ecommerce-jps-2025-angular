@@ -1,8 +1,11 @@
-<h1>Testeeasdiuahsdiuh</h1>
-
-<input type="text" name="" id="">
+<h1 
+[style.background]='title === "erro" ? "red" : "blue" '>Testeeasdiuahsdiuh</h1>
+<p>{{ title }}</p>
+<input type="text" name="" id="" [(ngModel)]='title'>
 
 <input type="checkbox" name="" id="">
+
+<button [id]='idButton' (click)="novaFuncao()">Nova funcao</button>
 
 <app-header></app-header>
 <app-header></app-header>
