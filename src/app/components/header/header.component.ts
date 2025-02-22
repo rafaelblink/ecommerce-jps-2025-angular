@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   nome: string;
-  idade: number = 12;
 
   constructor() {
     this.nome = 'Angular';

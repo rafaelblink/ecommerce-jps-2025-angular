@@ -1,9 +1,11 @@
 <div class="card">
     <img [src]="product.imgSrc" class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">{{ product.name | uppercase }}</h5>
+        <a [routerLink]="['/editar-produto', product.id]">
+            <h5 class="card-title">{{ product.name | uppercase }}</h5>
+        </a>
         <p class="card-text">{{ product.description }}</p>
-        <a href="#" class="btn btn-primary">Carrinho</a>
+        <a class="btn btn-primary" (click)="adicionarItemCarrinho()">Carrinho</a>
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">Preço: {{ product.price | currency: 'BRL' }}</li>

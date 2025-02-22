@@ -7,6 +7,7 @@ export class ProdutosService {
 
   products = [
     {
+      id: 1,
       name: 'Camiseta Preta',
       description: 'Camiseta preta básica',
       price: 40.01,
@@ -15,6 +16,7 @@ export class ProdutosService {
       stock: 10
     },
     {
+      id: 2,
       name: 'Camiseta Branca',
       description: 'Camiseta branca básica',
       price: 50.01,
