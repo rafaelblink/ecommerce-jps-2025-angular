@@ -1,3 +1,3 @@
 export const environment = {
-    url: 'http://localhost:1234/'
+    url: 'https://dummyjson.com'
 };

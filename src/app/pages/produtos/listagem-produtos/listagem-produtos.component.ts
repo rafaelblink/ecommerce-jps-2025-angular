@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { IProduct } from 'src/app/interfaces/product';
+import { IResponse } from 'src/app/interfaces/response';
 import { ProdutosService } from 'src/app/services/produtos.service';
 
 @Component({
@@ -8,12 +10,19 @@ import { ProdutosService } from 'src/app/services/produtos.service';
 })
 export class ListagemProdutosComponent {
 
-  products: any[] = [];
+  products: IProduct[] = [];
 
   constructor(private produtosService: ProdutosService) {}
 
   ngOnInit() {
-    this.products = this.produtosService.buscarTodosProdutos();
+    this.produtosService.buscarTodosProdutos().subscribe({
+      next: (response: IResponse) => {
+        this.products = response.products
+      },
+      error: (error) => {
+        console.error(error.message);
+      }
+    });
   }
 
 }

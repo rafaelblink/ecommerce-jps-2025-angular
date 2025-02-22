@@ -2,14 +2,13 @@
     <img [src]="product.imgSrc" class="card-img-top" alt="...">
     <div class="card-body">
         <a [routerLink]="['/editar-produto', product.id]">
-            <h5 class="card-title">{{ product.name | uppercase }}</h5>
+            <h5 class="card-title">{{ product.title | uppercase }}</h5>
         </a>
         <p class="card-text">{{ product.description }}</p>
         <a class="btn btn-primary" (click)="adicionarItemCarrinho()">Carrinho</a>
     </div>
     <ul class="list-group list-group-flush">
         <li class="list-group-item">Preço: {{ product.price | currency: 'BRL' }}</li>
-        <li class="list-group-item">Desconto: {{ product.discount }}</li>
         <li class="list-group-item">Estoque: {{ product.stock }}</li>
     </ul>
 </div>

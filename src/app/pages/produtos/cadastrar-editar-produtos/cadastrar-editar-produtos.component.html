@@ -1,1 +1,50 @@
 <h1>Cadastro e Edição: {{ id }}</h1>
+
+<form [formGroup]="formGroupProduto" (submit)="cadastrarProduto()">
+  <div class="mb-3">
+    <label for="title" class="form-label">Título</label>
+    <input
+      formControlName="title"
+      type="text"
+      class="form-control"
+      id="title"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="description" class="form-label">Descrição</label>
+    <textarea
+      class="form-control"
+      id="description"
+      rows="5"
+      formControlName="description"
+    ></textarea>
+  </div>
+  <div class="mb-3">
+    <label for="price" class="form-label">Preço</label>
+    <input
+      type="number"
+      class="form-control"
+      id="price"
+      formControlName="price"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="stock" class="form-label">Estoque</label>
+    <input
+      type="number"
+      class="form-control"
+      id="stock"
+      formControlName="stock"
+    />
+  </div>
+  <button
+    type="submit"
+    class="btn btn-primary"
+    [disabled]="!formGroupProduto.valid"
+  >
+    Cadastrar
+  </button>
+</form>
+
+{{ formGroupProduto.value | json }}
+{{ formGroupProduto.valid }}

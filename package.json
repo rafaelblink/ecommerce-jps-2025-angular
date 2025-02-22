@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "npx json-server src/assets/server.json --nc --port 1234 --watch "
+        "server": "npx json-server src/assets/server.json --port 1234 --watch --no-cors"
   },
   "private": true,
   "dependencies": {
