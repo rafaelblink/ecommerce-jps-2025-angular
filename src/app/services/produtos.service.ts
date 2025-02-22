@@ -1,4 +1,6 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -26,9 +28,14 @@ export class ProdutosService {
     }
   ];
 
-  constructor() { }
+  url = environment.url;
+
+  constructor(private http: HttpClient) { }
 
   buscarTodosProdutos() {
+    this.http.get(`${this.url}/products`).subscribe(response => {
+      console.log(response);
+    })
     return this.products;
   }
 }

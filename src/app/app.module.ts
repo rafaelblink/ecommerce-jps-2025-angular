@@ -12,6 +12,7 @@ import { CarrinhoComprasService } from './services/carrinho-compras.service';
 import { ListagemProdutosComponent } from './pages/produtos/listagem-produtos/listagem-produtos.component';
 import { CadastrarEditarProdutosComponent } from './pages/produtos/cadastrar-editar-produtos/cadastrar-editar-produtos.component';
 import { CarrinhoComprasComponent } from './pages/carrinho-compras/carrinho-compras.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { CarrinhoComprasComponent } from './pages/carrinho-compras/carrinho-comp
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [ProdutosService, CarrinhoComprasService],
   bootstrap: [AppComponent]
