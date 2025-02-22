@@ -1,4 +1,6 @@
-<h1>Cadastro e Edição: {{ id }}</h1>
+<h1>
+    {{ id ? 'Editar' : 'Cadastrar' }}
+</h1>
 
 <form [formGroup]="formGroupProduto" (submit)="cadastrarProduto()">
   <div class="mb-3">
@@ -42,7 +44,7 @@
     class="btn btn-primary"
     [disabled]="!formGroupProduto.valid"
   >
-    Cadastrar
+  {{ id ? 'Editar' : 'Cadastrar' }}
   </button>
 </form>
 

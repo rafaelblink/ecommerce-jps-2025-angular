@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-        "server": "npx json-server src/assets/server.json --port 1234 --watch --no-cors"
+    "server": "npx json-server src/assets/server.json --port 1234 --watch --no-cors"
   },
   "private": true,
   "dependencies": {
@@ -20,6 +20,7 @@
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "rxjs": "~7.8.0",
+    "sweetalert2": "^11.17.2",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
   },

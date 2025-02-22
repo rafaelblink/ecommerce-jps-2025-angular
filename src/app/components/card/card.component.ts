@@ -13,6 +13,10 @@ export class CardComponent {
 
   carrinhoComprasService = inject(CarrinhoComprasService);
 
+  ngOnInit() {
+    // console.log(this.product.images[0]);
+  }
+
   adicionarItemCarrinho() {
     this.carrinhoComprasService.adicionarItem(this.product);
   }

@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { IProduct } from 'src/app/interfaces/product';
 import { ProdutosService } from 'src/app/services/produtos.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-cadastrar-editar-produtos',
@@ -20,11 +21,17 @@ export class CadastrarEditarProdutosComponent {
 
   constructor(
     private readonly route: ActivatedRoute,
-    private readonly produtosService: ProdutosService
+    private readonly produtosService: ProdutosService,
+    private readonly router: Router
   ) {}
 
   ngOnInit() {
     this.id = this.route.snapshot.params['id'];
+    if (this.id) {
+      this.produtosService.buscarProdutoPorId(this.id).subscribe(response => {
+        console.log(response);
+      })
+    }
   }
 
   novoMetodo() {
@@ -40,6 +47,8 @@ export class CadastrarEditarProdutosComponent {
 
     this.produtosService.cadastrarProduto(produto).subscribe(response => {
       console.log(response);
+      Swal.fire('Sucesso', 'Produto cadastrado!!! UHULL!!', 'success');
+      this.router.navigate(['/produtos']);
     });
 
     console.log(this.formGroupProduto.value);

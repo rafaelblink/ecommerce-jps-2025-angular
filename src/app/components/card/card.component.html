@@ -1,5 +1,5 @@
 <div class="card">
-    <img [src]="product.imgSrc" class="card-img-top" alt="...">
+    <img [src]="product.images[0]" class="card-img-top bg-white" alt="...">
     <div class="card-body">
         <a [routerLink]="['/editar-produto', product.id]">
             <h5 class="card-title">{{ product.title | uppercase }}</h5>

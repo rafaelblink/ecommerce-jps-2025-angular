@@ -17,6 +17,10 @@ export class ProdutosService {
     return this.http.get<IResponse>(`${this.url}/products`);
   }
 
+  buscarProdutoPorId(id: string) {
+    return this.http.get<IProduct>(`${this.url}/products/${id}`)
+  }
+
   cadastrarProduto(produto: IProduct) {
     return this.http.post(`${this.url}/products/add`, produto);
   }
