@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ProdutosService } from './services/produtos.service';
 
 @Component({
   selector: 'app-root',
@@ -22,27 +23,14 @@ export class AppComponent {
     }
   ];
 
-  products = [
-    {
-      name: 'Camiseta Preta',
-      description: 'Camiseta preta básica',
-      price: 40.01,
-      imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRowHxllaAkkZ2KUpuBkq11BZNdkgz3suMrZQ&s',
-      discount: 10,
-      stock: 10
-    },
-    {
-      name: 'Camiseta Branca',
-      description: 'Camiseta branca básica',
-      price: 50.01,
-      imgSrc: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRowHxllaAkkZ2KUpuBkq11BZNdkgz3suMrZQ&s',
-      discount: 20,
-      stock: 50
-    }
-  ];
+  constructor(private produtosService: ProdutosService) {}
+
+  
 
   novaFuncao() {
     console.log('Nova função');
     this.title = 'Novo título';
   }
+
+ 
 }

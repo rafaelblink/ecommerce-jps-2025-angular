@@ -1,13 +1,13 @@
 <div class="card">
     <img [src]="product.imgSrc" class="card-img-top" alt="...">
     <div class="card-body">
-        <h5 class="card-title">{{ product.name }}</h5>
+        <h5 class="card-title">{{ product.name | uppercase }}</h5>
         <p class="card-text">{{ product.description }}</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
+        <a href="#" class="btn btn-primary">Carrinho</a>
     </div>
     <ul class="list-group list-group-flush">
-        <li class="list-group-item">{{ product.price }}</li>
-        <li class="list-group-item">{{ product.discount }}</li>
-        <li class="list-group-item">{{ product.stock }}</li>
+        <li class="list-group-item">Preço: {{ product.price | currency: 'BRL' }}</li>
+        <li class="list-group-item">Desconto: {{ product.discount }}</li>
+        <li class="list-group-item">Estoque: {{ product.stock }}</li>
     </ul>
 </div>

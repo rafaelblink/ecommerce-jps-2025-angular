@@ -1,4 +1,5 @@
 <div class="container">
+
   <app-header />
 
   <div class="p-5 mt-3 text-center bg-body-tertiary rounded-3">
@@ -18,12 +19,8 @@
     </div>
   </div>
 
-  <div class="row mt-3">
-    <div class="col-3" *ngFor='let product of products'>
-      <app-card [product]="product" />
-    </div>
-  </div>
-
 
   <router-outlet></router-outlet>
+
+
 </div>
